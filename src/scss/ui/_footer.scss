@@ -1,0 +1,75 @@
+//FOOTER
+@use '../custom' as *;
+
+.footer {
+    background-color: $secondary;
+    color: white;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        text-align: left;
+    }
+
+    &__container {
+        @include make-container;
+        max-width: map-get($map: $container-max-widths, $key: xxl);
+    }
+
+    &__row {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        @include make-row;
+    }
+
+    &__widget {
+        @include make-col-ready;
+        margin-bottom: 2rem;
+
+        &:not(:first-child):not(:last-child)::after {
+            content: "";
+            display: block;
+            width: 50%; // largo del borde
+            height: 1px; // grosor del borde
+            background-color: $primary;
+            margin: 1rem auto;
+        }
+
+        @include media-breakpoint-up(md) {
+            @include make-col(3);
+
+            &:not(:first-child):not(:last-child)::after {
+                content: none;
+            }
+        }
+    }
+
+    &__logo {
+        width: 18rem;
+        margin-bottom: 5rem;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__heading {
+        color: $primary;
+    }
+
+    &__link {
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    &__copyright {
+        @include make-container;
+        max-width: map-get($map: $container-max-widths, $key: xxl);
+        border-top: 2px solid $primary;
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+}

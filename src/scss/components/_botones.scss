@@ -1,0 +1,30 @@
+//BOTONES
+@use '../custom' as *;
+
+.btn-header {
+    //BG, Border, Color, HOVER: BG, Border, Color
+    @include button-variant($primary, transparent, $secondary, darken($primary, 10%), 
+    transparent, darken($secondary, 10%));
+
+    //px, py, fs, border-radius
+    @include button-size(1rem, 5rem, 2rem, 0);
+
+    margin-top: 1rem;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+    }
+}
+
+.btn-plan {
+    @extend .btn-header;
+    border: 1px solid white;
+    
+    @include media-breakpoint-up(md) {
+        display: block;
+        padding: 1rem 0.5rem;
+    }
+}

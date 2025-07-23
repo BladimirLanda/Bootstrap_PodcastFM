@@ -1,0 +1,24 @@
+//CUSTOM BTS
+$verde: #84D9BC;
+$gris: #313C4E;
+
+//Colores + Tipografia
+$primary: $verde;
+$secondary: $gris;
+
+$font-family-sans-serif: 'Poppins', sans-serif;
+$headings-font-family: 'Poppins', sans-serif;
+$headings-font-weight: 700;
+
+$font-size-root: 62.5%;
+$font-size-base: 2rem;
+
+$h1-font-size: 4.5rem;
+$h2-font-size: 3.6rem;
+$h3-font-size: 3rem;
+
+//Espaciado
+$spacer: 5rem;
+
+//Bootstrap Importación
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
