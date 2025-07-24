@@ -44,7 +44,7 @@ export function compilarSass() {
         .pipe( dest('build/css') ); //Carpeta de salida
 }
 
-//Tare Build
+//Tarea Build (Purge para optimizar el CSS a solo el necesario)
 export function cssbuild() {
   return src('build/css/app.css')
     .pipe(rename({
