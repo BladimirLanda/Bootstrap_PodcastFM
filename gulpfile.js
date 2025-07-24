@@ -56,12 +56,12 @@ export function cssbuild() {
     .pipe(dest('build/css'))
 }
 
-//Tarea para observar cambios
+//Función para observar cambios
 export function watcher() {
   watch('src/scss/**/*.scss', compilarSass);
 }
 
-//Tareas secuenciales
+//Función de tareas secuenciales (Gulp lo debe de ejecutar de forma directa)
 export default series(compilarSass, cssbuild);
 
 /*
